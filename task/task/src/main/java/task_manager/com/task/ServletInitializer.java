@@ -1,4 +1,4 @@
-package taskmanager.com.task;
+package task_manager.com.task;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
