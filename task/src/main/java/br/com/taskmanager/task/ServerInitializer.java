@@ -1,11 +1,11 @@
-package task_manager.task;
-
+package br.com.taskmanager.task;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
-public class ServletInitializer extends SpringBootServletInitializer {
 
-	@Override
+public class ServerInitializer extends SpringBootServletInitializer {
+  
+   @Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		return application.sources(TaskApplication.class);
 	}

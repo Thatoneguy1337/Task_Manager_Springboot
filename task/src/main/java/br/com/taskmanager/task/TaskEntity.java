@@ -1,21 +1,18 @@
-package task_manager.task;
+package br.com.taskmanager.task;
+
 import java.util.UUID;
-
 import javax.persistence.*;
-
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 
-@Entity
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@Entity(name = "task")
 public class TaskEntity {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
     @NotEmpty
@@ -30,6 +27,10 @@ public class TaskEntity {
     @Column(nullable = false)
     private String description;
 
+    public TaskEntity(String title, String status, String description) {
+        this.title = title;
+        this.status = status;
+        this.description = description;
+    }
+
 }
-
-

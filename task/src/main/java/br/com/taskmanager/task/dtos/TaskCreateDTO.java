@@ -1,4 +1,4 @@
-package task_manager.task.dtos;
+package br.com.taskmanager.task.dtos;
 import lombok.Data;
 import java.util.UUID;
 
@@ -8,5 +8,4 @@ public class TaskCreateDTO {
     private String title;
     private String status;
     private String description;
-    
 }

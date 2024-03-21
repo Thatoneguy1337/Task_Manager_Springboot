@@ -1,4 +1,4 @@
-package task_manager.task;
+package br.com.taskmanager.task;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TaskApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TaskController.class, args);
+		SpringApplication.run(TaskApplication.class, args);
 	}
 
 }
