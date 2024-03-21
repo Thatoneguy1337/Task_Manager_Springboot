@@ -1,0 +1,5 @@
+{
+    "java.project.sourcePaths": [
+        "task\\src\\main\\java\\task_manager\\com\\task"
+    ]
+}
