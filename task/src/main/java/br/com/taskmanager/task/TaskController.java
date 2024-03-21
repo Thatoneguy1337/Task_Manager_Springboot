@@ -14,15 +14,11 @@ import java.util.UUID;
 @RequestMapping("/api/task")
 public class TaskController {
 
-    private final TaskService taskService;
-
     @Autowired
-    public TaskController(TaskService taskService) {
-        this.taskService = taskService;
-    }
+    private TaskService taskService;
 
     @PostMapping
-        public ResponseEntity<TaskEntity> createTask(@RequestBody TaskCreateDTO taskDto) {
+    public ResponseEntity<TaskEntity> createTask(@RequestBody TaskCreateDTO taskDto) {
         TaskEntity createdTask = taskService.createTask(taskDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdTask);
     }
@@ -44,6 +40,6 @@ public class TaskController {
     public ResponseEntity<Void> delete(@PathVariable UUID id) {
         taskService.deleteTask(id);
         return ResponseEntity.noContent().build();
-        }
+    }
     }
 

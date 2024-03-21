@@ -11,12 +11,9 @@ import java.util.UUID;
 @Service
 public class TaskService {
 
+    @Autowired
     private TaskRepository taskRepository;
 
-    @Autowired
-    public TaskService(TaskRepository taskRepository) {
-        this.taskRepository = taskRepository;
-    }
 
       public TaskEntity createTask(TaskCreateDTO taskDto) {
         TaskEntity task = new TaskEntity(taskDto.getTitle(), taskDto.getStatus(), taskDto.getDescription());
